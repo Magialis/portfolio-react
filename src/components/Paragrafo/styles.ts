@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Props } from '.'; // como esse arquivo se chama index, podemos colocar apenas o .
+import { Props } from '.' // como esse arquivo se chama index, podemos colocar apenas o .
 
 export const P = styled.p<Props>`
   font-size: 14px;
