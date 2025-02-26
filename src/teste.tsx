@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
 type BotaoProps = {
-  principal: boolean;
-  fontSize?: string; // o ? faz com que seja opcional
+  principal: boolean
+  fontSize?: string // o ? faz com que seja opcional
 }
 
 const Botao = styled.button<BotaoProps>`
-  background-color: ${(props) => props.principal ? 'green' : 'blue'};
-  font-size: ${(props) => props.fontSize || '16px'}
+  background-color: ${(props) => (props.principal ? 'green' : 'blue')};
+  font-size: ${(props) => props.fontSize || '16px'};
 `
 const BotaoPerigo = styled(Botao)`
   background-color: red;
@@ -22,7 +22,9 @@ function Teste() {
   return (
     <>
       <Botao principal>Enviar</Botao>
-      <Botao fontSize="14px" principal={false}>Cancelar</Botao>
+      <Botao fontSize="14px" principal={false}>
+        Cancelar
+      </Botao>
       <BotaoPerigo as="a" principal>
         <span>Não clique aqui</span>
       </BotaoPerigo>
