@@ -4,14 +4,22 @@ import Titulo from '../../components/Titulo'
 
 import { Descricao, BotaoTema, SidebarContainer } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  trocaTema: () => void;
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <Avatar />
       <Titulo fontSize={20}>Leticia Magialis</Titulo>
-      <Paragrafo tipo='secundario' fontSize={16}>Magialis</Paragrafo>
-      <Descricao tipo='principal' fontSize={12}>Desenvolvedora web</Descricao>
-      <BotaoTema>Trocar tema</BotaoTema>
+      <Paragrafo tipo="secundario" fontSize={16}>
+        Magialis
+      </Paragrafo>
+      <Descricao tipo="principal" fontSize={12}>
+        Desenvolvedora web
+      </Descricao>
+      <BotaoTema onClick={props.trocaTema}>Trocar tema</BotaoTema>
     </SidebarContainer>
   </aside>
 )

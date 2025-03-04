@@ -1,4 +1,4 @@
-import { FotoPerfil } from "./styles"
+import { FotoPerfil } from './styles'
 
 const Avatar = () => (
   <FotoPerfil src="https://github.com/Magialis.png" alt="Avatar" />
